@@ -1,0 +1,18 @@
+http://darkhorizon.tistory.com/entry/JQUERY-%EB%A1%A4%EB%A7%81%EB%90%98%EB%8A%94-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8
+
+상단부에 다음의 스크립트를 추가한다.
+
+<script type="text/javascript" src="/js/scrollnews.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+ $("#roll").Scroll({line:1,speed:1500,timer:3000,up:"#topbtnid",down:"#btmbtnid",autoplay:'#bannerplay',autostop:'#bannerstop'});
+});
+</script>
+
+본문에 롤링될 리스트를 div로 감싼다
+
+<div class="noti" id="roll" style="height:14px; overflow:hidden;width:300px;">
+<ul>
+
+</ul>
+</div>
