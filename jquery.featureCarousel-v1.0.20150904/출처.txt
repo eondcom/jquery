@@ -1,0 +1,84 @@
+http://blog.naver.com/PostView.nhn?blogId=whwlfnsl&logNo=70089836790&categoryNo=45&parentCategoryNo=45&viewDate=&currentPage=2&postListTopCurrentPage=1&userTopListOpen=true&userTopListCount=5&userTopListManageOpen=false&userTopListCurrentPage=2
+
+Search Results 결과 클릭 - Try out a demonstration를 클릭해서 데모를 확인할수 있다.
+ 
+[예제]
+ <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+        <title>Feature Carousel Demonstration Test</title>
+        <link rel="stylesheet" href="css/featureCarousel.css" charset="utf-8" />
+        <script src="js/jquery-1.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/jquery.featureCarousel.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#featureCarousel").featureCarousel({
+                    // include options like this:
+                    // (use quotes only for string values, and no trailing comma after last option)
+                    // option: value,
+                    // option: value
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="featureCarousel">
+            <div class="feature">
+                <a href="#"><img alt="Image Caption" src="images/testImage1.png"></a>
+                <div>
+                    <p>
+                        This is some information that can go along with an image.
+                        Anything can be placed here, including images.
+                    </p>
+                </div>
+            </div>
+            <div class="feature">
+                <a href="#"><img alt="Image Caption" src="images/testImage2.png"></a>
+                <div>
+                    <p>
+                        This is some information that can go along with an image.
+                        Anything can be placed here, including images.
+                    </p>
+                </div>
+            </div>
+            <div class="feature">
+                <a href="#"><img alt="Image Caption" src="images/testImage3.png"></a>
+                <div>
+                    <p>
+                        This is some information that can go along with an image.
+                        Anything can be placed here, including images.
+                    </p>
+                </div>
+            </div>
+            <div class="feature">
+                <a href="#"><img alt="Image Caption" src="images/testImage4.png"></a>
+                <div>
+                    <p>
+                        This is some information that can go along with an image.
+                        Anything can be placed here, including images.
+                    </p>
+                </div>
+            </div>
+            <div class="feature">
+                <a href="#"><img alt="Image Caption" src="images/testImage5.png"></a>
+                <div>
+                    <p>
+                        This is some information that can go along with an image.
+                        Anything can be placed here, including images.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+ 
+ 
+[결과]
+
+ 
+[참고]
+http://sorgalla.com/jcarousel/
+http://www.bkosborne.com/featureCarousel.php
+http://sorgalla.com/jcarousel/
