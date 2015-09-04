@@ -1,0 +1,59 @@
+http://blog.naver.com/PostView.nhn?blogId=whwlfnsl&logNo=70089631659
+[jquery.rolling.js 다운로드]
+http://songsungkyun.cafe24.com/interpark/JQueryRolling.html
+ 
+Generating Rolling Example에서 rolling 코드 자동생성도 가능하다.
+
+ 
+ 
+[예제]
+ <html>
+<head>
+<title>JQuery Rolling</title>
+<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="jquery.rolling.js"></script>
+<script type="text/javascript">
+ $(function() {
+   var arr = $("#rolling li").toArray();
+ 
+   $("#rolling").empty();
+ 
+   var rollingDiv = $("#rolling");
+   rollingDiv.rolling("up", 100, 20, 1);
+ 
+   rollingDiv.bind("mouseover", function() {
+    $("#rolling").stopRolling();
+   });
+
+   rollingDiv.bind("mouseout", function() {
+    $("#rolling").resumeRolling();
+   });
+ 
+   for(var i=0; i<arr.length; i++)
+   {
+    rollingDiv.addRollingItem("<li>" + arr[i].innerHTML + "</li>");
+   }
+   rollingDiv.startRolling(50, 2000, 10);
+ });
+</script>
+</head>
+<body>
+<h1>Rolling Other HTML Content Example</h1><hr>
+<div>
+ <ul id="rolling">
+  <li>111</li>   
+  <li>222</li>
+  <li>333</li>
+  <li>444</li>
+  <li>555</li>
+ </ul>
+</div>  
+</body>
+</html>
+
+ 
+[.toArray]
+jQuery 확장집합에 들어 있는 모든 DOM 엘리먼트를 배열로 반환한다.
+var arr = $('li').toArray();
+alert('Index: ' + arr[0].innerHTML );
+모든 <li>를 배열에 넣는다.
