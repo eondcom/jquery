@@ -12,6 +12,8 @@ $.fn.extend({
 			}
 			var _btnUp = $(opt.up);
 			var _btnDown = $(opt.down);
+			var _btnStop = $(opt.autostop); // 추가
+			var _btnPlay = $(opt.autoplay); // 추가
 			var timerID;
 			var _this=this.eq(0).find("ul:first");
 			var lineH=_this.find("li:first").width(), 
@@ -63,9 +65,11 @@ $.fn.extend({
 					if(timer)window.clearInterval(timerID);
 					return false;
 			};
-			//_this.parent().hover(autoStop,autoPlay).mouseout();
+			_this.parent().hover(autoStop,autoPlay).mouseout(); // 주석 제거
 			_btnUp.css("cursor","pointer").click( scrollUp );
 			_btnDown.css("cursor","pointer").click( scrollDown );
+			_btnStop.css("cursor","pointer").click( autoStop ); // 추가
+			_btnPlay.css("cursor","pointer").click( autoPlay ); // 추가
 			if(timer)timerID = window.setInterval(scrollUp,timer);
 	}
 })
