@@ -1,18 +1,38 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
 <script type="text/javascript" src="scrollnews.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-$("#roll").Scroll({line:1,speed:1500,timer:3000,up:"#topbtnid",down:"#btmbtnid",autoplay:'#bannerplay',autostop:'#bannerstop'});
+  $("#roll").Scroll({
+    line:1,
+    speed:1500,
+    timer:3000,
+    up:"#topbtnid",
+    down:"#btmbtnid",
+    autoplay:'#bannerplay',
+    autostop:'#bannerstop'
+  });
 });
 </script>
 </head>
 <body>
-<div class="noti" id="roll" style="height:14px; overflow:hidden;width:300px;">
-<ul>
+본문에 롤링될 리스트를 div로 감싼다
 
-</ul>
+<div class="noti" id="roll" style="height:15px; overflow:hidden;width:300px;">
+
+  <ul>
+    <!-- 출력될 내용 -->
+    <li>하이1</li>
+    <li>하이2</li>
+    <li>하이3</li>
+    <!--// 출력될 내용 -->
+  </ul>
 </div>
+
+<div id="bannerplay">재생</div>
+<div id="bannerstop">정지</div>
+<div id="topbtnid">위로</div>
+<div id="btmbtnid">아래로</div>
 </body>
 </html>
